@@ -2,12 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def x(n):
-        return n**2
+        return (1+2*n)
 n_values= np.arange(-3, 10, 1)
 
-y= np.heaviside(n_values, 0) *x(n_values)
+y= np.heaviside(n_values, 1) *x(n_values)
 
-plt.stem(n_values, y, linefmt='-', markerfmt='o', basefmt='r', label=r'$n^2$')
+plt.stem(n_values, y, linefmt='-', markerfmt='o', basefmt='r', label=r'$1+2n$')
 
 plt.xlabel('n')
 plt.ylabel("x(n)")
