@@ -7,7 +7,6 @@
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
-\usepackage[justification=centering]{caption}
 \usepackage{xcolor}
 \usepackage{txfonts}
 \usepackage{listings}
@@ -60,18 +59,15 @@ If the sum of first 7 terms of an AP is 49 and that of 17 terms is 289, find the
 first n terms.
 \\\\
 \textbf{Solution: }\\
-The sum of first $n$ terms of an AP $S_n$ , whose first term is $x\brak{0}$ and common difference is $d$ is:
 \begin{align}
 S_n=\frac{n}{2}\,\brak{2x\brak{0}+\brak{n-1}\,d}\label{eq10.5.3.9.1}
 \end{align}
-Given, the sum of first $7$ terms of the AP is 49.
 \begin{align}
 S_7&=49 \\
 49&=\frac{7}{2}\,\brak{2x\brak{0}+\brak{7-1}\,d}  \\
 49&=\frac{7}{2}\,\brak{2x\brak{0}+6d}  \\
 x\brak{0}+3d&=7\label{eq10.5.3.9.2}
 \end{align}
-Also given, the sum of first $17$ terms of the AP is 289.
 \begin{align}
 S_{17}&=289  \\
 289&=\frac{17}{2}\,\brak{2x\brak{0}+\brak{17-1}\,d}  \\
@@ -101,9 +97,7 @@ From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix 
  \begin{pmatrix}
     1&0&1\\
     0&1&2
- \end{pmatrix}
-\end{align}
-\begin{align}
+ \end{pmatrix}\\
  \implies
  \begin{pmatrix}
     x\brak{0}\\
@@ -116,37 +110,25 @@ From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix 
 \end{align}
 \begin{align}
 \implies S_n&= \frac{n}{2}\,\brak{2x\brak{0}+\brak{n-1}\,d}\label{eq10.5.3.9.4}\\
-S_n&=\frac{n}{2}\,\brak{2\brak{1}+\brak{n-1}\brak{2}}  \\
-S_n&=n\,\brak{1+n-1}  \\
 S_n&=n^2\label{eq10.5.3.9.5}
 \end{align}
-The general term of the AP is:
 \begin{align}
-    x\brak{n}&=x\brak{0}+nd\\
-    \implies x\brak{n}&= 1+2n \;\; \forall n\geq0\\
-    \implies x\brak{n}&= \brak{1+2n}u\brak{n}
+    x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}\\
+    \implies x\brak{n}&= \brak{1+2n}u\brak{n}\\
+    &x\brak{n}\system{Z}X\brak{z}\\
+    X\brak{z}&= \sum_{n=-\infty}^{\infty}\brak{1+2n}u\brak{n} z^{-n}\\
+    X\brak{z}&=0+\sum_{n=0}^{\infty}\brak{1+2n} z^{-n}\\
+    \text{If: }\notag &x\brak{n}\system{Z}X\brak{z}\\
+    \implies n^k&x\brak{n}\system{Z}\brak{-1}^{k}z^k\frac{d^k}{dz^k}\brak{X\brak{z}}\notag\\
+    \implies X\brak{z}&=\frac{1+z^{-1}}{\brak{1-z^{-1}}^2} \;\;\cbrak{z\in\mathbb{C}: |z|>1}
 \end{align}
 
 \begin{figure}[h]
-    \renewcommand\thefigure{1}
     \centering
-    \captionsetup{justification=centering}
     \includegraphics[width=1.1\linewidth]{Figure_1.png}
     \caption{Stem Plot of x(n)}
     \label{stemplot}
 \end{figure}
-\begin{align}
-    x\brak{n}\system{Z}X\brak{z}
-\end{align}
-\begin{align}
-    X\brak{z}&= \sum_{n=-\infty}^{\infty}\brak{1+2n}u\brak{n} z^{-n}\\
-    X\brak{z}&=0+\sum_{n=0}^{\infty}\brak{1+2n} z^{-n}\\
-    X\brak{z}&=\sum_{n=0}^{\infty}z^{-n}+2\sum_{n=0}^{\infty}nz^{-n}\\
-    \text{If: }\notag &x\brak{n}\system{Z}X\brak{z}\\
-    \implies n^k&x\brak{n}\system{Z}\brak{-1}^{k}z^k\frac{d^k}{dz^k}\brak{X\brak{z}}\notag\\
-    \implies X\brak{z}&=\frac{1}{1-z^{-1}}+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}\\
-    X\brak{z}&=\frac{1+z^{-1}}{\brak{1-z^{-1}}^2} \;\;\forall\;\;|z|>1
-\end{align}
 Generalizing the problem:\\
 Let the sum of first $n_1$ terms of the AP be 49, and the sum of first $n_2$ terms of the AP be 289.\\
 From equation \ref{eq10.5.3.9.1}:
@@ -205,20 +187,23 @@ From  equations \ref{eq10.5.3.9.10} and \ref{eq10.5.3.9.11}, the augmented matri
  \end{align}
  \begin{table}[h]
     \centering
-    \renewcommand\thetable{1}
-    \begin{tabular}[12pt]{ |c| c|}
+    \begin{tabular}[12pt]{ |c| c| c|}
     \hline
-    \textbf{Variable} & \textbf{Description} \\ 
+    \textbf{Variable} & \textbf{Description} &\textbf{Value}\\ 
     \hline
-    $x\brak{0}$ & First term of the AP \\
+    $x\brak{0}$ & First term of the AP &1\\
     \hline 
-    $d$ & Common difference of the AP \\
+    $d$ & Common difference of the AP& 2\\
     \hline
-    $S_n$ & Sum of $n$ terms of the AP \\
+    $S_n$ & Sum of $n$ terms of the AP& $n^2$\\
     \hline
-    $x(n)$ & General term \\
+    $S_7$& Sum of 7 terms of the AP& 49\\
     \hline
-    $X(z)$ & Z- transform of $x(n)$\\
+    $S_{17}$& Sum of 17 terms of the AP&289\\
+    \hline
+    $x(n)$ & General term& $\brak{1+2n}\,u\brak{n}$\\
+    \hline
+    $X(z)$ & Z- transform of $x(n)$& $\frac{1+z^{-1}}{\brak{1-z^{-1}}^2} \cbrak{z\in\mathbb{C}: |z|>1}$\\
     \hline    
     \end{tabular}
     \caption{Variables Used}
