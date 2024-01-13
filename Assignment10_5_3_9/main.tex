@@ -58,18 +58,14 @@
 If the sum of first 7 terms of an AP is 49 and that of 17 terms is 289, find the sum of
 first n terms.
 \\\\
-\textbf{Solution: }\\
+\textbf{Solution: }
 \begin{align}
-S_n=\frac{n}{2}\,\brak{2x\brak{0}+\brak{n-1}\,d}\label{eq10.5.3.9.1}
-\end{align}
-\begin{align}
-S_7&=49 \\
+S\brak{n}&=\frac{n}{2}\,\brak{2x\brak{0}+\brak{n-1}\,d}\label{eq10.5.3.9.1}\\
+S\brak{7}&=49 \\
 49&=\frac{7}{2}\,\brak{2x\brak{0}+\brak{7-1}\,d}  \\
 49&=\frac{7}{2}\,\brak{2x\brak{0}+6d}  \\
-x\brak{0}+3d&=7\label{eq10.5.3.9.2}
-\end{align}
-\begin{align}
-S_{17}&=289  \\
+x\brak{0}+3d&=7\label{eq10.5.3.9.2}\\
+S\brak{17}&=289  \\
 289&=\frac{17}{2}\,\brak{2x\brak{0}+\brak{17-1}\,d}  \\
 289&=\frac{17}{2}\,\brak{2x\brak{0}+16d}  \\
 x\brak{0}+8d&=17 \label{eq10.5.3.9.3}
@@ -109,82 +105,24 @@ From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix 
  \end{pmatrix}
 \end{align}
 \begin{align}
-\implies S_n&= \frac{n}{2}\,\brak{2x\brak{0}+\brak{n-1}\,d}\label{eq10.5.3.9.4}\\
-S_n&=n^2\label{eq10.5.3.9.5}
+    \implies S\brak{n}&= \frac{n}{2}\,\brak{2x\brak{0}+\brak{n-1}\,d}\label{eq10.5.3.9.4}\\
+    S\brak{n}&=n^2\label{eq10.5.3.9.5}
 \end{align}
 \begin{align}
     x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}\\
+    \text{From \tabref{tab10.5.3.9.1}:}\notag\\
     \implies x\brak{n}&= \brak{1+2n}u\brak{n}\\
-    &x\brak{n}\system{Z}X\brak{z}\\
-    X\brak{z}&= \sum_{n=-\infty}^{\infty}\brak{1+2n}u\brak{n} z^{-n}\\
-    X\brak{z}&=0+\sum_{n=0}^{\infty}\brak{1+2n} z^{-n}\\
-    \text{If: }\notag &x\brak{n}\system{Z}X\brak{z}\\
-    \implies n^k&x\brak{n}\system{Z}\brak{-1}^{k}z^k\frac{d^k}{dz^k}\brak{X\brak{z}}\notag\\
+    &x\brak{n}\system{Z}X\brak{z}\notag\\
+    X\brak{z}&=\frac{x\brak{0}}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2}\\
+    \text{From \tabref{tab10.5.3.9.1}:}\notag\\
     \implies X\brak{z}&=\frac{1+z^{-1}}{\brak{1-z^{-1}}^2} \;\;\cbrak{z\in\mathbb{C}: |z|>1}
 \end{align}
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.1\linewidth]{Figure_1.png}
-    \caption{Stem Plot of x(n)}
+    \caption{Stem Plot of x\brak{n}}
     \label{stemplot}
 \end{figure}
-Generalizing the problem:\\
-Let the sum of first $n_1$ terms of the AP be 49, and the sum of first $n_2$ terms of the AP be 289.\\
-From equation \ref{eq10.5.3.9.1}:
-\begin{align}
-\implies \frac{n_1}{2}\,\brak{2x\brak{0}+\brak{n_1-1}\,d}&=49\\
-\implies n_1x\brak{0}+ d\,\frac{\brak{n_1-1}\brak{n_1}}{2}&=49\label{eq10.5.3.9.10}
-\end{align}
-Also,
-\begin{align}
-\frac{n_2}{2}\,\brak{2x\brak{0}+\brak{n_1-1}\,d}&=289\\
-\implies x\brak{0}\brak{n_2}+ d\,\frac{\brak{n_2-1}\brak{n_2}}{2}&=289\label{eq10.5.3.9.11}
-\end{align}
-From  equations \ref{eq10.5.3.9.10} and \ref{eq10.5.3.9.11}, the augmented matrix is:
-\begin{align}
-    \begin{pmatrix}
-        n_1&\frac{\brak{n_1-1}\brak{n_1}}{2}&49\\
-        n_2&\frac{\brak{n_2-1}\brak{n_2}}{2}&289
-    \end{pmatrix}
-    \\R_1\rightarrow\frac{1}{n_1}R_1\notag\\
-    \begin{pmatrix}
-        1&\frac{\brak{n_1-1}}{2}&\frac{49}{n_1}\\
-        n_2&\frac{n_2\,\brak{n_2-1}}{2}&289
-    \end{pmatrix}\\
-    R_2 \rightarrow R_2-n_2R_1\notag\\
-    \begin{pmatrix}
-        1&\frac{\brak{n_1-1}}{2}&\frac{49}{n_1}\\
-        0&\frac{n_2\,\brak{n_2-n_1}}{2}&289-\frac{49}{n_1}
-    \end{pmatrix}\\
-    R_2\rightarrow\frac{2}{n_2\brak{n_2-n_1}}R_2\notag\\
-    \begin{pmatrix}
-        1&\frac{\brak{n_1-1}}{2}&\frac{49}{n_1}\\
-        0&1&\frac{2\brak{49n_2-289 n_1}}{n_1 n_2\brak{n_1-n_2}}
-    \end{pmatrix}
-\end{align}
-\begin{align}
-    &R_1\rightarrow R_1-\brak{\frac{n_1-1}{2}} R_2\notag\\
-    &\begin{pmatrix}
-        1 & 0 & \frac{289 n_1^2-289 n_1-49n_2^2+49 n_2}{n_1 n_2\brak{n_1-n_2}} \\\\
-        0 & 1 & \frac{2\brak{-289 n_1+49 n_2}}{n_1 n_2\brak{n_1-n_2}}
-    \end{pmatrix}\\\notag\\
-    \implies &x\brak{0}=49\brak{\frac{-n_2+1}{n_1^2-n_1n_2}}+289\brak{\frac{-n_1+1}{n_2^2-n_1n_2}}\label{eq10.5.3.9.12}\\
-    \implies &d=49\brak{\frac{2}{n_1^2-n_1n_2}}+289\brak{\frac{2}{n_2^2-n_1n_2}}\label{eq10.5.3.9.13}
-\end{align}
- From the equations \ref{eq10.5.3.9.4}, \ref{eq10.5.3.9.12} and \ref{eq10.5.3.9.13}:
- \begin{align}
-     \implies S_n = \frac{n}{2}\,\brak{2\brak{49\brak{\frac{-n_2+1}{n_1^2-n_1n_2}}}+289\brak{\frac{-n_1+1}{n_2^2-n_1n_2}}}\notag\\
-     +\brak{n-1}\,\brak{49\brak{\frac{2}{n_1^2-n_1n_2}}+289\brak{\frac{2}{n_2^2-n_1n_2}}}
- \end{align}
- The general term of the AP is:
- \begin{align}
-    x\brak{n}= 49\brak{\frac{-n_2+1}{n_1^2-n_1n_2}}+289\brak{\frac{-n_1+1}{n_2^2-n_1n_2}} +\notag\\
-    n\brak{49\brak{\frac{2}{n_1^2-n_1n_2}}+289\brak{\frac{2}{n_2^2-n_1n_2}}}\\
-    \forall\;\; n\geq0\notag\\
-    \implies x\brak{n}= \brak{49\brak{\frac{-n_2+1}{n_1^2-n_1n_2}}+289\brak{\frac{-n_1+1}{n_2^2-n_1n_2}} +\notag\\
-    n\brak{49\brak{\frac{2}{n_1^2-n_1n_2}}+289\brak{\frac{2}{n_2^2-n_1n_2}}}}u\brak{n}
- \end{align}
  \begin{table}[h]
     \centering
     \begin{tabular}[12pt]{ |c| c| c|}
@@ -195,11 +133,11 @@ From  equations \ref{eq10.5.3.9.10} and \ref{eq10.5.3.9.11}, the augmented matri
     \hline 
     $d$ & Common difference of the AP& 2\\
     \hline
-    $S_n$ & Sum of $n$ terms of the AP& $n^2$\\
+    $S\brak{n}$ & Sum of $n$ terms of the AP& $n^2$\\
     \hline
-    $S_7$& Sum of 7 terms of the AP& 49\\
+    $S\brak{7}$& Sum of 7 terms of the AP& 49\\
     \hline
-    $S_{17}$& Sum of 17 terms of the AP&289\\
+    $S\brak{17}$& Sum of 17 terms of the AP&289\\
     \hline
     $x(n)$ & General term& $\brak{1+2n}\,u\brak{n}$\\
     \hline
@@ -207,5 +145,6 @@ From  equations \ref{eq10.5.3.9.10} and \ref{eq10.5.3.9.11}, the augmented matri
     \hline    
     \end{tabular}
     \caption{Variables Used}
+    \label{tab10.5.3.9.1}
 \end{table}
 \end{document}  
