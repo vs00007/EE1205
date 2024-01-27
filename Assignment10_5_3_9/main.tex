@@ -60,14 +60,9 @@ first n terms.
 \\\\
 \textbf{Solution: }
 \begin{align}
-s\brak{n}&=\frac{n+1}{2}\,\brak{2x\brak{0}+nd}\label{eq10.5.3.9.1}\\
+s\brak{n}&=\frac{n+1}{2}\,\brak{2x\brak{0}+nd}\,u\brak{n}\label{eq10.5.3.9.1}\\
 \text{From \tabref{tab10.5.3.9.1}:}\notag\\
-49&=\frac{\brak{6+1}}{2}\,\brak{2x\brak{0}+6d}  \\
-49&=\frac{7}{2}\,\brak{2x\brak{0}+6d}  \\
 x\brak{0}+3d&=7\label{eq10.5.3.9.2}\\
-\text{From \tabref{tab10.5.3.9.1}:}\notag  \\
-289&=\frac{\brak{16+1}}{2}\,\brak{2x\brak{0}+16d}  \\
-289&=\frac{17}{2}\,\brak{2x\brak{0}+16d}  \\
 x\brak{0}+8d&=17 \label{eq10.5.3.9.3}
 \end{align}
 From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix is:
@@ -111,25 +106,21 @@ From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix 
  }
 \end{align}
 \begin{align}
-    x\brak{n}&=\brak{x\brak{0}+nd}u\brak{n}\\
     \text{From \tabref{tab10.5.3.9.1}:}\notag\\
     \implies x\brak{n}&= \brak{1+2n}u\brak{n}\\
     &x\brak{n}\system{Z}X\brak{z}\notag\\
-    X\brak{z}&=\frac{x\brak{0}}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2}\\
     \text{From \tabref{tab10.5.3.9.1}:}\notag\\
-    \implies X\brak{z}&=\frac{1+z^{-1}}{\brak{1-z^{-1}}^2} \;\;\cbrak{z\in\mathbb{C}: |z|>1}
+    \implies X\brak{z}&=\frac{1}{1-z^{-1}}+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}\;\;\cbrak{z\in\mathbb{C}: |z|>1}
 \end{align}
 \begin{align}
    s\brak{n}&=x\brak{n}*u\brak{n}\\
    s\brak{n}&\system{Z}S\brak{z}\notag\\
    \implies S\brak{z}&=X\brak{z}\,U\brak{z}\\
-   \implies S\brak{z}&=\brak{\frac{1+z^{-1}}{\brak{1-z^{-1}}^2}}\brak{\frac{1}{1-z^{-1}}}\\
-   S\brak{z}&=\frac{1+z^{-1}}{\brak{1-z^{-1}}^3}\\
+   \implies S\brak{z}&=\brak{\frac{1}{1-z^{-1}}+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}}\brak{\frac{1}{1-z^{-1}}}\\
    S\brak{z}&=\frac{1}{\brak{1-z^{-1}}^2}+\frac{2z^{-1}}{\brak{1-z^{-1}}^3}\\
-   S\brak{z}&=\frac{1}{\brak{1-z^{-1}}}+\brak{-z\,\frac{d}{dz}\brak{\frac{1}{\brak{1-z^{-1}}^2}}}\\
-   S\brak{z}&=\frac{1}{1-z^{-1}}+\frac{z^{-1}}{\brak{1-z^{-1}}^2}\notag\\
-   &+\brak{z\,\frac{d}{dz}\brak{\frac{1}{\brak{1-z^{-1}}^2}}}\\
-   \implies s\brak{n}&=\brak{u\brak{n}+nu\brak{n}}+n\brak{u\brak{n}+nu\brak{n}}\\
+   &=z\frac{z^{-1}}{({1-z^{-1}})^2}+\brak{-z\,\frac{d}{dz}\brak{z\frac{z^{-1}}{\brak{1-z^{-1}}^2}}}\\
+   &x(n+1) \system zX(z)\notag\\
+   &=\brak{n+1}u\brak{n}+n\brak{\brak{n+1}u\brak{n}}\\
    \implies s\brak{n}&=\brak{n+1}^2\,u\brak{n}
 \end{align}
 \begin{figure}[h!]
@@ -154,11 +145,7 @@ From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix 
    $s\brak{16}$& Sum of 17 terms of the AP&289\\
    \hline
    $x\brak{n}$ & General term& ?\\
-   \hline
-   $X\brak{z}$ & Z- transform of $x(n)$& ?\\
-   \hline
-   $S\brak{z}$ &Z- transform of $s\brak{n}$& ?\\
-   \hline    
+   \hline   
    \end{tabular}
    \caption{Variables Used}
    \label{tab10.5.3.9.1}
