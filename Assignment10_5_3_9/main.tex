@@ -125,26 +125,22 @@ From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix 
    2
  }
 \end{align}
-From \tabref{tab10.5.3.9.1},
 \begin{align}
-    \implies x\brak{n}&= \brak{1+2n}u\brak{n}\\
+    x\brak{n}&= \brak{1+2n}u\brak{n}\\
     &x\brak{n}\system{Z}X\brak{z}\notag\\
-\end{align}
-    From \tabref{tab10.5.3.9.1}:
-\begin{align}
-    \implies X\brak{z}&=\frac{1}{1-z^{-1}}+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}\;\;\cbrak{z\in\mathbb{C}: |z|>1}
+    X\brak{z}=\frac{1}{1-z^{-1}}&+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}\;\;\cbrak{z\in\mathbb{C}: |z|>1}
 \end{align}
 \begin{align}
    s\brak{n}&=x\brak{n}*u\brak{n}\\
    s\brak{n}&\system{Z}S\brak{z}\notag\\
-   \implies S\brak{z}&=X\brak{z}\,U\brak{z}\\
+   S\brak{z}&=X\brak{z}\,U\brak{z}\\
    \implies S\brak{z}&=\brak{\frac{1}{1-z^{-1}}+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}}\brak{\frac{1}{1-z^{-1}}}\\
    &=\frac{1}{\brak{1-z^{-1}}^2}+\frac{2z^{-1}}{\brak{1-z^{-1}}^3}\\
    &=z\frac{z^{-1}}{({1-z^{-1}})^2}+\brak{-z\,\frac{d}{dz}\brak{z\frac{z^{-1}}{\brak{1-z^{-1}}^2}}}
 \end{align}
-   From \eqref{eq:time_shift} and \eqref{eq:uzder},
+   From \eqref{eq:uzder-shift} and \eqref{eq:uzder}, taking the inverse Z Transform,
    \begin{align}
-   \implies s\brak{n}&=\brak{n+1}u\brak{n}+n\brak{\brak{n+1}u\brak{n}}\\
+   s\brak{n}&=\brak{n+1}u\brak{n}+n\brak{\brak{n+1}u\brak{n}}\\
    \implies s\brak{n}&=\brak{n+1}^2\,u\brak{n}
 \end{align}
 \begin{figure}[h!]
