@@ -5,7 +5,7 @@ def x(n):
         return (1+2*n)
 n_values= np.arange(-3, 10, 1)
 
-y= np.loadtxt("series.txt", delimiter="")
+y= np.loadtxt("series.txt", delimiter=" ", max_rows=1)
 
 plt.stem(n_values, y, linefmt='-', markerfmt='o', basefmt='r', label=r'$1+2n$')
 
