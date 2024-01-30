@@ -69,7 +69,7 @@ first n terms.
   \hline 
   $d$ & Common difference of the AP\\
   \hline
-  $s\brak{n}$ & Sum of $n+1$ terms of the AP\\
+  $y\brak{n}$ & Sum of $n+1$ terms of the AP\\
   \hline
   $x\brak{n}$ & General term\\
   \hline   
@@ -78,9 +78,9 @@ first n terms.
   \label{tab10.5.3.9.1}
 \end{table}
 \begin{align}
-s\brak{n}&=\frac{n+1}{2}\,\brak{2x\brak{0}+nd}\,u\brak{n}\label{eq10.5.3.9.1}\\
-s\brak{6}&=49\\
-s\brak{16}&=289
+y\brak{n}&=\frac{n+1}{2}\,\brak{2x\brak{0}+nd}\,u\brak{n}\label{eq10.5.3.9.1}\\
+y\brak{6}&=49\\
+y\brak{16}&=289
 \end{align}
 Then,
 \begin{align}
@@ -129,26 +129,25 @@ From  equations \ref{eq10.5.3.9.2} and \ref{eq10.5.3.9.3}, the augmented matrix 
 \end{align}
 \begin{align}
     x\brak{n}&= \brak{1+2n}u\brak{n}\\
-    &x\brak{n}\system{Z}X\brak{z}\notag\\
     X\brak{z}=\frac{1}{1-z^{-1}}&+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}\;\;\cbrak{z\in\mathbb{C}: |z|>1}
 \end{align}
 \begin{align}
-   s\brak{n}&=x\brak{n}*u\brak{n}\\
-   s\brak{n}&\system{Z}S\brak{z}\notag\\
-   S\brak{z}&=X\brak{z}\,U\brak{z}\\
-   \implies S\brak{z}&=\brak{\frac{1}{1-z^{-1}}+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}}\brak{\frac{1}{1-z^{-1}}}\\
+   y\brak{n}&=x\brak{n}*u\brak{n}\\
+   Y\brak{z}&=X\brak{z}\,U\brak{z}\\
+   \implies Y\brak{z}&=\brak{\frac{1}{1-z^{-1}}+\frac{2z^{-1}}{\brak{1-z^{-1}}^2}}\brak{\frac{1}{1-z^{-1}}}\\
    &=\frac{1}{\brak{1-z^{-1}}^2}+\frac{2z^{-1}}{\brak{1-z^{-1}}^3}\\
-   &=z\frac{z^{-1}}{({1-z^{-1}})^2}+\brak{-z\,\frac{d}{dz}\brak{z\frac{z^{-1}}{\brak{1-z^{-1}}^2}}}
+   \brak{n+1}u\brak{n}&\system{Z}\frac{1}{\brak{1-z^{-1}}^2}\cbrak{z\in\mathbb{C}: |z|>1}\\
+   n\brak{\brak{n+1}u\brak{n}}&\system{Z}\frac{2z^{-1}}{\brak{1-z^{-1}}^3}\cbrak{z\in\mathbb{C}: |z|>1}
 \end{align}
-   From \eqref{eq:uzder-shift} and \eqref{eq:uzder}, taking the inverse Z Transform,
+   Taking the inverse Z Transform,
    \begin{align}
-   s\brak{n}&=\brak{n+1}u\brak{n}+n\brak{\brak{n+1}u\brak{n}}\\
-   \implies s\brak{n}&=\brak{n+1}^2\,u\brak{n}
+   y\brak{n}&=\brak{n+1}u\brak{n}+n\brak{\brak{n+1}u\brak{n}}\\
+   \implies y\brak{n}&=\brak{n+1}^2\,u\brak{n}
 \end{align}
 \begin{figure}[h!]
    \centering
    \includegraphics[width=1.1\linewidth]{Figure_1.png}
-   \caption{Stem Plot of x\brak{n}}
+   \caption{Stem Plot of y\brak{n}}
    \label{stemplot}
 \end{figure}
 \end{document}  
