@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.7)  30 JAN 2024 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.7)  1 FEB 2024 20:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -989,6 +989,12 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 64
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
+
+LaTeX Warning: Reference `eq:uzder-shift' on page 1 undefined on input line 142.
+
+
+LaTeX Warning: Reference `eq:uzder-der' on page 1 undefined on input line 142.
+
 <Figure_1.png, id=9, 462.528pt x 346.896pt>
 File: Figure_1.png Graphic file (type png)
 <use Figure_1.png>
@@ -1003,19 +1009,22 @@ Overfull \hbox (25.20154pt too wide) in paragraph at lines 149--150
 
 
  <./Figure_1.png>] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29606 strings out of 480171
- 583801 string characters out of 5894490
+ 29608 strings out of 480171
+ 583831 string characters out of 5894490
  861357 words of memory out of 5000000
- 46890 multiletter control sequences out of 15000+600000
+ 46892 multiletter control sequences out of 15000+600000
  540400 words of font info for 173 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  101i,18n,96p,439b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 71024 bytes).
+Output written on main.pdf (1 page, 72090 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
