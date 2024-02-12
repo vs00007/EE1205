@@ -59,6 +59,7 @@ Find the sum to $n$ terms of the series:\\
     $1^2+\brak{1^2+2^2}+\brak{1^2+2^2+3^2}+...$
     \\
 \textbf{Solution:}
+%\fi
 \begin{table}[h!]    
     \centering
     \input{tables/table.tex}
@@ -85,6 +86,10 @@ From \eqref{eq:11.9.5.26.3},
 \end{align}
 Using \eqref{eq:shiftk},
 \begin{align}
+    \brak{n+1}^2u\brak{n}&\system{Z}\frac{1+z^{-1}}{\brak{1-z^{-1}}^3}\label{eq:11.9.4.7.1}
+\end{align}
+From \eqref{eq:11.9.4.7.1},
+\begin{align}
     X\brak{z}&=\brak{\frac{1+z^{-1}}{\brak{1-z^{-1}}^3}}\brak{\frac{1}{1-z^{-1}}}\\
     X\brak{z}&=\frac{1+z^{-1}}{\brak{1-z^{-1}}^4}\;\;\cbrak{\abs{z}>1}
 \end{align}
@@ -94,11 +99,13 @@ Using \eqref{eq:shiftk},
     &=\frac{1+z^{-1}}{\brak{1-z^{-1}}^5}\;\;\cbrak{\abs{z}>1}\\
     &=\frac{1}{\brak{1-z^{-1}}^5}+\frac{z^{-1}}{\brak{1-z^{-1}}^5}
 \end{align}
-From \eqref{eq:11.9.5.26.12},
+From \eqref{eq:11.9.5.26.12}, using \eqref{eq:shiftk},
 \begin{align}
-    \frac{\brak{n-1}\brak{n-2}\brak{n-3}\brak{n-4}}{24}u\brak{n-1}\notag\\\system{Z}\frac{z^{-5}}{\brak{1-z^{-1}}^5}\cbrak{\abs{z}>1}
+    %\frac{\brak{n-1}\brak{n-2}\brak{n-3}\brak{n-4}}{24}u\brak{n-1}\notag\\\system{Z}\frac{z^{-5}}{\brak{1-z^{-1}}^5}\cbrak{\abs{z}>1}
+    \frac{\brak{n+1}\brak{n+2}\brak{n+3}\brak{n+4}}{24}u\brak{n}&\system{Z}\frac{1}{\brak{1-z^{-1}}^5}\label{eq:11.9.4.7.2}\cbrak{\abs{z}>1}\\
+    \frac{\brak{n}\brak{n+1}\brak{n+2}\brak{n+3}}{24}u\brak{n}&\system{Z}\frac{z^{-1}}{\brak{1-z^{-1}}^5}\label{eq:11.9.4.7.3}\cbrak{\abs{z}>1}
 \end{align}
-Using \eqref{eq:shiftk}, taking the Inverse Z Transform,
+From \eqref{eq:11.9.4.7.2} and \eqref{eq:11.9.4.7.3}, taking the Inverse Z Transform,
 \begin{align}
     y\brak{n}&=\brak{\frac{\brak{n+1}\brak{n+2}\brak{n+3}\brak{n+4}}{24}u\brak{n}}\notag\\
     &\;+\brak{\frac{\brak{n}\brak{n+1}\brak{n+2}\brak{n+3}}{24}u\brak{n}}\\
@@ -106,7 +113,7 @@ Using \eqref{eq:shiftk}, taking the Inverse Z Transform,
 \end{align}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\linewidth]{figs/Figure_1.png}
+    \includegraphics[width=0.97\linewidth]{figs/Figure_1.png}
     \caption{Stem Plot of $y\brak{n}$}
 \end{figure}
 \end{document}
