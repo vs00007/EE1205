@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-n_values=np.arange(-3,13)
+n_values=np.arange(-3,11)
 y1=np.loadtxt("series.dat", delimiter=" ", max_rows=1)
 y2=np.loadtxt("series.dat", delimiter=" ", skiprows=1)
 plt.stem(n_values,y1, markerfmt="bo", basefmt='r', label=r'Theory')

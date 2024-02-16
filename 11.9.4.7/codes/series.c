@@ -30,10 +30,10 @@ int x(int n){
 int main(){
     FILE *ptr;
     ptr=fopen("series.dat", "w");
-    for(int i=-3; i<12; i++){
+    for(int i=-3; i<10; i++){
         fprintf(ptr,"%d ", sum(i));
     }
-    fprintf(ptr,"%d\n", sum(12));// theoretical values of sum of n terms of the series
+    fprintf(ptr,"%d\n", sum(10));// theoretical values of sum of n terms of the series
 
     int size1=16, size2=16;
 	int sig1[size1];
@@ -48,10 +48,10 @@ int main(){
 	convolve(sig1, sig2, result1, size1, size2);
 	int result2[2*size1+size2-2];
 	convolve(sig1,result1,result2,size2,size1+size2-1);
-	for(int i=6; i<21; i++){
+	for(int i=6; i<19; i++){
 		fprintf(ptr,"%d ", result2[i]);
 	}
-    fprintf(ptr, "%d",result2[21]);// sum to n terms of the series using convolution
+    fprintf(ptr, "%d",result2[19]);// sum to n terms of the series using convolution
 
     fclose(ptr);
 }
