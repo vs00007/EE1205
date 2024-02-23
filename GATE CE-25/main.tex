@@ -65,71 +65,42 @@ which options amongst the following are true?
     \item $b_n$, $n=1,2,..,\infty$ depend on $p$
     \item $b_n$, $n=1,2,..,\infty$ depend on $q$
 \end{enumerate}
-\textbf{Solution:}\\
-% %\fi
-% \begin{align}
-%     f\brak{x}=a_0+\sum_{n=1}^{\infty}\cbrak{a_n\sin\brak{\frac{\pi n x}{L}}+b_n\cos\brak{\frac{\pi n x}{L}}}\label{eq:GATE_CE25_1}
-% \end{align}
-% Finding the Fourier Coefficient $a_0$,
-% \begin{align}
-%     a_0&=\frac{1}{2L}\int_{-L}^{L}f\brak{x}\;dx\\
-%     &=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}\;dx\\
-%     &=\frac{1}{2L}\brak{2\int_{0}^{L}px^4\;dx+0}\\
-%     &=\frac{p}{L}\frac{x^5}{5}\Bigg|_{-L}^{L}\\
-%     \implies a_0&=\frac{2pL^4}{5}
-% \end{align}
-% Finding the Fourier Coefficients $a_n$,
-% \begin{align}
-%     a_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x} \sin\brak{\frac{\pi n x}{L}}\;dx\\
-%     &=\frac{1}{L}\int_{-L}^{L}\brak{px^4+qx^5}\sin\brak{\frac{\pi n x}{L}}\;dx\\
-%     &=0+\frac{1}{L}\int_{-L}^{L}qx^5\sin\brak{\frac{\pi n x}{L}}\;dx
-% \end{align}
-% \begin{align}
-%     &=-\frac{q}{\pi n}\brak{x^5\cos\brak{\frac{\pi n x}{L}}}+\frac{5qL}{\brak{\pi n}^2}\brak{x^4\sin\brak{\frac{\pi n x}{L}}}\notag\\
-%     &\;\;\;+\frac{20qL^2}{\brak{\pi n}^3}\brak{x^3\cos\brak{\frac{\pi n x}{L}}}-\frac{60qL^3}{\brak{\pi n }^4}\brak{x^2\sin\brak{\frac{\pi n x}{L}}}\notag\\
-%     &\;\;\;-\frac{120qL^4}{\brak{\pi n}^5}\brak{x\cos\brak{\frac{\pi n x}{L}}}+\frac{120qL^5}{\brak{\pi n}^6}\sin\brak{\frac{\pi n x}{L}}\Bigg|_{-L}^{L}\\
-%     &=-\frac{2q}{\pi n}\brak{L^5\cos\brak{\pi n }}+\frac{40qL^2}{\brak{\pi n}^3}\brak{L^3\cos\brak{\pi n }}\notag\\
-%     &\;\;\;-\frac{240qL^4}{\brak{\pi n}^5}\brak{L\cos\brak{\pi n}}\\
-%     \implies a_n&=\brak{-1}^{n+1}\brak{2qL^5}\brak{\frac{1}{\pi n}-\frac{2}{\brak{\pi n}^3}+\frac{120}{\brak{\pi n}^5}}
-% \end{align}
-% Finding the Fourier Coefficients $b_n$,
-% \begin{align}
-%     b_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x} \cos\brak{\frac{\pi n x}{L}}\;dx\\
-%     &=\frac{1}{L}\int_{-L}^{L}\brak{px^4+qx^5}\cos\brak{\frac{\pi n x}{L}}\;dx\\
-%     &=\frac{1}{L}\int_{-L}^{L}px^4\cos\brak{\frac{\pi n x}{L}}\;\;dx+0\\
-%     &=\frac{p}{\pi n}\brak{x^4\sin\brak{\frac{\pi n x}{L}}}+\frac{4pL}{\brak{\pi n}^2}\brak{x^3\cos\brak{\frac{\pi n x}{L}}}\notag\\
-%     &\;\;\;-\frac{12pL^2}{\brak{\pi n}^3}\brak{x^2\sin\brak{\frac{\pi n x}{L}}}-\frac{2pL^3}{\brak{\pi n}^4}\brak{x\cos\brak{\frac{\pi n x}{L}}}\notag\\
-%     &\;\;\;+\frac{24pL^4}{\brak{\pi n }^5}\sin\brak{\frac{\pi n x}{L}}\Bigg|_{-L}^{L}\\
-%     &=\frac{8pL}{\brak{\pi n}^2}\brak{L^3\cos\brak{\pi n}}-\frac{2pL^3}{\brak{\pi n}^4}\brak{L\cos\brak{\pi n}}\\
-%     \implies b_n&=\brak{-1}^n\brak{2pL^4}\brak{\frac{4}{\brak{\pi n}^2}+\frac{1}{\brak{\pi n}^4}}
-% \end{align}
+\textbf{Solution:}
+\begin{table}[h!]    
+    \centering
+    \input{tables/table.tex}
+    \caption{Parameters}
+    \label{tab:CE:25}
+\end{table}\\
 The complex exponential Fourier Series of $f\brak{x}$ is,
 \begin{align}
-    f\brak{x}&=\sum_{-\infty}^{\infty}c_ne^{j\frac{\pi nx}{L}}\\
-    c_n&=\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx\\
-    &=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx\\
+    f\brak{x}&=\sum_{n=-\infty}^{\infty}c_ne^{j\frac{\pi nx}{L}}\\
+    \implies c_n&=\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx\\
+    c_n&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx
+\end{align}
+For $n=0$, 
+\begin{align}
+    c_0&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}\;dx\\
+    &=\frac{pL^4}{5}
+\end{align}
+For $n\neq0$,
+\begin{align}
+    c_n&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx\\
     &=\frac{pL^4}{2}\brak{e^{j\pi n}-e^{-j\pi n}}\brak{\frac{1}{j\pi n}+\frac{12}{\brak{j\pi n}^3}+\frac{24}{\brak{j\pi n}^5}}\notag\\
     &\;\;\;-\frac{pL^4}{2}\brak{e^{j\pi n}+e^{-j\pi n}}\brak{\frac{4}{\brak{j\pi n}^2}+\frac{24}{\brak{j\pi n}^4}}\notag\\
     &\;\;\;-\frac{qL^5}{2}\brak{e^{j\pi n}+e^{-j\pi n}}\brak{\frac{1}{j\pi n}+\frac{20}{\brak{j\pi n}^3}+\frac{120}{\brak{j\pi n}^5}}\notag\\
     &\;\;\;+\frac{qL^5}{2}\brak{e^{j\pi n}-e^{-j\pi n}}\brak{\frac{5}{\brak{j\pi n}^2}+\frac{60}{\brak{j\pi n}^4}+\frac{120}{\brak{j\pi n}^6}}\\
-    c_n&=0-\brak{pL^4}\brak{-1}^n\brak{-\frac{4}{\brak{\pi n}^2}+\frac{24}{\brak{\pi n}^4}}\notag\\
-    &\;\;\;-\brak{qL^5}\brak{-1}^n\brak{-\frac{j}{{\pi n}}+\frac{20j}{\brak{\pi n}^3}-\frac{120j}{\brak{\pi n}^5}}+0
+    &=\brak{pL^4}\brak{-1}^n\brak{\frac{4}{\brak{\pi n}^2}-\frac{24}{\brak{\pi n}^4}}\notag\\
+    &\;\;\;-\brak{qL^5}\brak{-1}^n\brak{-\frac{j}{{\pi n}}+\frac{20j}{\brak{\pi n}^3}-\frac{120j}{\brak{\pi n}^5}}
 \end{align}
-We know,
+Given,
 \begin{align}
     f\brak{x}=a_0+\sum_{n=1}^{\infty}\cbrak{a_n\sin\brak{\frac{\pi n x}{L}}+b_n\cos\brak{\frac{\pi n x}{L}}}
 \end{align}
-% Here,
-% \begin{align}
-%     a_n&=\frac{c_n-c_{-n}}{2j}\\
-%     b_n&=\frac{c_n+c_{-n}}{2}
-% \end{align}
 Finding the Fourier Coefficient $a_0$,
 \begin{align}
     a_0&=c_0\\
-    \implies a_0&=\frac{1}{2L}\int_{-L}^{L}f\brak{x}\;dx\\
-    &=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}\;dx\\
-    &=\frac{pL^4}{5}
+    \implies a_0&=\frac{pL^4}{5}
 \end{align}
 Finding the Fourier Coefficients $a_n$,
 \begin{align}
