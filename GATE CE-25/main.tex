@@ -85,7 +85,7 @@ For $n=0$,
 \end{align}
 For $n\neq0$,
 \begin{align}
-    c_n&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx\\
+    c_n&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx\label{eq:CE-25.1}\\
     &=\frac{pL^4}{2}\brak{e^{j\pi n}-e^{-j\pi n}}\brak{\frac{1}{j\pi n}+\frac{12}{\brak{j\pi n}^3}+\frac{24}{\brak{j\pi n}^5}}\notag\\
     &\;\;\;-\frac{pL^4}{2}\brak{e^{j\pi n}+e^{-j\pi n}}\brak{\frac{4}{\brak{j\pi n}^2}+\frac{24}{\brak{j\pi n}^4}}\notag\\
     &\;\;\;-\frac{qL^5}{2}\brak{e^{j\pi n}+e^{-j\pi n}}\brak{\frac{1}{j\pi n}+\frac{20}{\brak{j\pi n}^3}+\frac{120}{\brak{j\pi n}^5}}\notag\\
@@ -102,15 +102,31 @@ Finding the Fourier Coefficient $a_0$,
     a_0&=c_0\\
     \implies a_0&=\frac{pL^4}{5}
 \end{align}
+We know,
+\begin{align}
+    \sin \theta&=\frac{e^{j\theta}-e^{-j\theta}}{2j}
+\end{align}
 Finding the Fourier Coefficients $a_n$,
 \begin{align}
-    a_n&=\frac{c_{-n}-c_n}{j}\\
-    \implies a_n&=\brak{-2qL^5}\brak{-1}^{n}\brak{\frac{1}{\pi n}-\frac{2}{\brak{\pi n}^3}+\frac{120}{\brak{\pi n}^5}}
+    a_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\sin\brak{\frac{\pi nx}{L}}\;dx\\
+    a_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\brak{\frac{e^{j\frac{\pi n x}{L}}-e^{-j\frac{\pi n x}{L}}}{2j}}\;dx\\
+    &=\frac{1}{2Lj}\int_{-L}^{L}f\brak{x}e^{j\frac{\pi n x}{L}}\;dx-\frac{1}{2Lj}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx
+\end{align}
+\begin{align}
+    \implies a_n&=\frac{c_{-n}-c_n}{j}\\
+    a_n&=\brak{-2qL^5}\brak{-1}^{n}\brak{\frac{1}{\pi n}-\frac{2}{\brak{\pi n}^3}+\frac{120}{\brak{\pi n}^5}}
+\end{align}
+We know,
+\begin{align}
+    \cos\theta&=\frac{e^{j\theta}+e^{-j\theta}}{2}
 \end{align}
 Finding the Fourier Coefficients $b_n$,
 \begin{align}
-    b_n&=c_n+c_{-n}\\
-    \implies b_n&=\brak{2pL^4}\brak{-1}^n\brak{\frac{4}{\brak{\pi n}^2}-\frac{24}{\brak{\pi n}^4}}
+    b_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\cos\brak{\frac{\pi nx}{L}}\;dx\\
+    b_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\brak{\frac{e^{j\frac{\pi n x}{L}}+e^{-j\frac{\pi n x}{L}}}{2}}\;dx\\
+    &=\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{j\frac{\pi n x}{L}}\;dx+\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx\\
+    \implies b_n&=c_{-n}+c_n\\
+    b_n&=\brak{2pL^4}\brak{-1}^n\brak{\frac{4}{\brak{\pi n}^2}-\frac{24}{\brak{\pi n}^4}}
 \end{align}
 Hence, options \brak{\text{b}} and \brak{\text{c}} are correct.
 \begin{figure}[h!]
