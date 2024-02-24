@@ -57,13 +57,13 @@
 The following function is defined over the interval $[-L,L]$:
     $$f\brak{x}=px^4+qx^5$$
 It is expressed as a Fourier series,
-    $$f\brak{x}=a_0+\sum_{n=1}^{\infty}\cbrak{a_n\sin\brak{\frac{\pi n x}{L}}+b_n\cos\brak{\frac{\pi n x}{L}}}$$
+    $$f\brak{x}=a\brak{0}+\sum_{n=1}^{\infty}\cbrak{a\brak{n}\sin\brak{\frac{\pi n x}{L}}+b\brak{n}\cos\brak{\frac{\pi n x}{L}}}$$
 which options amongst the following are true?
 \begin{enumerate}[label=(\alph*)]
-    \item $a_n$, $n=1,2,..,\infty$ depend on $p$
-    \item $a_n$, $n=1,2,..,\infty$ depend on $q$
-    \item $b_n$, $n=1,2,..,\infty$ depend on $p$
-    \item $b_n$, $n=1,2,..,\infty$ depend on $q$
+    \item $a\brak{n}$, $n=1,2,..,\infty$ depend on $p$
+    \item $a\brak{n}$, $n=1,2,..,\infty$ depend on $q$
+    \item $b\brak{n}$, $n=1,2,..,\infty$ depend on $p$
+    \item $b\brak{n}$, $n=1,2,..,\infty$ depend on $q$
 \end{enumerate}
 \textbf{Solution:}
 \begin{table}[h!]    
@@ -74,18 +74,18 @@ which options amongst the following are true?
 \end{table}\\
 The complex exponential Fourier Series of $f\brak{x}$ is,
 \begin{align}
-    f\brak{x}&=\sum_{n=-\infty}^{\infty}c_ne^{j\frac{\pi nx}{L}}\\
-    \implies c_n&=\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx\\
-    c_n&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx
+    f\brak{x}&=\sum_{n=-\infty}^{\infty}c\brak{n}e^{j\frac{\pi nx}{L}}\\
+    \implies c\brak{n}&=\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx\\
+    c\brak{n}&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx
 \end{align}
 For $n=0$, 
 \begin{align}
-    c_0&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}\;dx\\
+    c\brak{0}&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}\;dx\\
     &=\frac{pL^4}{5}
 \end{align}
 For $n\neq0$,
 \begin{align}
-    c_n&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx\label{eq:CE-25.1}\\
+    c\brak{n}&=\frac{1}{2L}\int_{-L}^{L}\brak{px^4+qx^5}e^{-j\frac{\pi n x}{L}}\;dx\label{eq:CE-25.1}\\
     &=\frac{pL^4}{2}\brak{e^{j\pi n}-e^{-j\pi n}}\brak{\frac{1}{j\pi n}+\frac{12}{\brak{j\pi n}^3}+\frac{24}{\brak{j\pi n}^5}}\notag\\
     &\;\;\;-\frac{pL^4}{2}\brak{e^{j\pi n}+e^{-j\pi n}}\brak{\frac{4}{\brak{j\pi n}^2}+\frac{24}{\brak{j\pi n}^4}}\notag\\
     &\;\;\;-\frac{qL^5}{2}\brak{e^{j\pi n}+e^{-j\pi n}}\brak{\frac{1}{j\pi n}+\frac{20}{\brak{j\pi n}^3}+\frac{120}{\brak{j\pi n}^5}}\notag\\
@@ -95,38 +95,38 @@ For $n\neq0$,
 \end{align}
 Given,
 \begin{align}
-    f\brak{x}=a_0+\sum_{n=1}^{\infty}\cbrak{a_n\sin\brak{\frac{\pi n x}{L}}+b_n\cos\brak{\frac{\pi n x}{L}}}
+    f\brak{x}=a\brak{0}+\sum_{n=1}^{\infty}\cbrak{a\brak{n}\sin\brak{\frac{\pi n x}{L}}+b\brak{n}\cos\brak{\frac{\pi n x}{L}}}
 \end{align}
-Finding the Fourier Coefficient $a_0$,
+Finding the Fourier Coefficient $a\brak{0}$,
 \begin{align}
-    a_0&=c_0\\
-    \implies a_0&=\frac{pL^4}{5}
+    a\brak{0}&=c\brak{0}\\
+    \implies a\brak{0}&=\frac{pL^4}{5}
 \end{align}
 We know,
 \begin{align}
     \sin \theta&=\frac{e^{j\theta}-e^{-j\theta}}{2j}
 \end{align}
-Finding the Fourier Coefficients $a_n$,
+Finding the Fourier Coefficients $a\brak{n}$,
 \begin{align}
-    a_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\sin\brak{\frac{\pi nx}{L}}\;dx\\
-    a_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\brak{\frac{e^{j\frac{\pi n x}{L}}-e^{-j\frac{\pi n x}{L}}}{2j}}\;dx\\
+    a\brak{n}&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\sin\brak{\frac{\pi nx}{L}}\;dx\\
+    a\brak{n}&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\brak{\frac{e^{j\frac{\pi n x}{L}}-e^{-j\frac{\pi n x}{L}}}{2j}}\;dx\\
     &=\frac{1}{2Lj}\int_{-L}^{L}f\brak{x}e^{j\frac{\pi n x}{L}}\;dx-\frac{1}{2Lj}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx
 \end{align}
 \begin{align}
-    \implies a_n&=\frac{c_{-n}-c_n}{j}\\
-    a_n&=\brak{-2qL^5}\brak{-1}^{n}\brak{\frac{1}{\pi n}-\frac{2}{\brak{\pi n}^3}+\frac{120}{\brak{\pi n}^5}}
+    \implies a\brak{n}&=\frac{c\brak{-n}-c\brak{n}}{j}\\
+    a\brak{n}&=\brak{-2qL^5}\brak{-1}^{n}\brak{\frac{1}{\pi n}-\frac{2}{\brak{\pi n}^3}+\frac{120}{\brak{\pi n}^5}}
 \end{align}
 We know,
 \begin{align}
     \cos\theta&=\frac{e^{j\theta}+e^{-j\theta}}{2}
 \end{align}
-Finding the Fourier Coefficients $b_n$,
+Finding the Fourier Coefficients $b\brak{n}$,
 \begin{align}
-    b_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\cos\brak{\frac{\pi nx}{L}}\;dx\\
-    b_n&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\brak{\frac{e^{j\frac{\pi n x}{L}}+e^{-j\frac{\pi n x}{L}}}{2}}\;dx\\
+    b\brak{n}&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\cos\brak{\frac{\pi nx}{L}}\;dx\\
+    b\brak{n}&=\frac{1}{L}\int_{-L}^{L}f\brak{x}\brak{\frac{e^{j\frac{\pi n x}{L}}+e^{-j\frac{\pi n x}{L}}}{2}}\;dx\\
     &=\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{j\frac{\pi n x}{L}}\;dx+\frac{1}{2L}\int_{-L}^{L}f\brak{x}e^{-j\frac{\pi n x}{L}}\;dx\\
-    \implies b_n&=c_{-n}+c_n\\
-    b_n&=\brak{2pL^4}\brak{-1}^n\brak{\frac{4}{\brak{\pi n}^2}-\frac{24}{\brak{\pi n}^4}}
+    \implies b\brak{n}&=c\brak{-n}+c\brak{n}\\
+    b\brak{n}&=\brak{2pL^4}\brak{-1}^n\brak{\frac{4}{\brak{\pi n}^2}-\frac{24}{\brak{\pi n}^4}}
 \end{align}
 Hence, options \brak{\text{b}} and \brak{\text{c}} are correct.
 \begin{figure}[h!]
