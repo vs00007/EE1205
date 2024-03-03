@@ -79,24 +79,34 @@ If $G\brak{-f} = + G^*\brak{f}$, from \eqref{eq:PH-26-2022.1} and \eqref{eq:PH-2
     f\brak{x} = f^*\brak{x}
 \end{align}
 Hence, $f\brak{x}$ is real. \\
-Consider, $f\brak{x}=\sin\brak{x}$,
+Consider, $G\brak{f} = \frac {j} {2} \brak{\delta \brak{ f + f_0 } - \delta \brak { f - f_0 }}$,
 \begin{align}
-    G\brak{f} &= -\frac{j}{2} \brak{\delta\brak{ f - f_0 } - \delta\brak{ f + f_0} } \\
-    \implies G\brak{-f} &= \frac{j}{2} \brak{\delta\brak{ f - f_0 } - \delta\brak{ f + f_0 } } \\
-    G^*\brak{f} &= \frac{j}{2} \brak{\delta\brak{ f - f_0 } - \delta\brak{ f + f_0 } }
+    G\brak{-f} &= -\frac{j}{2} \brak{\delta\brak{ f + f_0 } - \delta\brak{ f - f_0} } \\
+    G^*\brak{f} &= -\frac{j}{2} \brak{\delta\brak{ f + f_0 } - \delta\brak{ f - f_0 } } \\
+    \implies G\brak{-f} &= +G^*\brak{f}
 \end{align}
-Here, $f\brak{x}$ is real and $G\brak{-f} = + G^*\brak{f}$.\\
+Here, $f\brak{x} = \sin \brak{2 \pi f_0 x}$, is real.\\
+\begin{figure}[h!]
+    \centering
+    \input{figs/fig1.tex}
+    \label{fig:PH-26-2022.1}
+\end{figure}\\
 If $G\brak{-f} = - G^*\brak{s}$, from \eqref{eq:PH-26-2022.1} and \eqref{eq:PH-26-2022.2},
 \begin{align}
     f\brak{x} = -f^*\brak{x}
 \end{align}
 Hence, $f\brak{x}$ is purely imaginary. \\
-Consider, $f\brak{x} = j \cos\brak{x} $,
+Consider, $G\brak{f} = \frac{j}{2} \brak{ \delta\brak{ f - f_0 } + \delta\brak{ f + f_0} } $,
 \begin{align}
-    G\brak{f} &= \frac{j}{2} \brak{ \delta\brak{ f - f_0 } + \delta\brak{ f + f_0} } \\
-    \implies G\brak{-f} &= \frac{j}{2} \brak{ \delta\brak{ f + f_0 } + \delta\brak{ f - f_0} } \\
-    G^*\brak{f} &= -\frac{j}{2} \brak{ \delta\brak{ f - f_0 } + \delta\brak{ f + f_0} }
+    G\brak{-f} &= \frac{j}{2} \brak{ \delta\brak{ f + f_0 } + \delta\brak{ f - f_0} } \\
+    G^*\brak{f} &= -\frac{j}{2} \brak{ \delta\brak{ f - f_0 } + \delta\brak{ f + f_0} } \\
+    \implies G\brak{-f} &= -G^*\brak{f}
 \end{align}
-Here, $f\brak{x}$ is purely imaginary and $G\brak{-f} = -G^*\brak{f}$. \\
+Here, $f\brak{x} = j \cos\brak{2 \pi f_0 x}$, is purely imaginary.
+\begin{figure}[h!]
+    \centering
+    \input{figs/fig2.tex}
+    \label{fig:PH-26-2022.2}
+\end{figure}\\
 Therefore, $\brak{\text{a}}$ and $\brak{\text{b}}$ are true.
 \end{document}
